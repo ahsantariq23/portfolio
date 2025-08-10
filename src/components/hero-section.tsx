@@ -4,9 +4,10 @@ import { ArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative w-full py-24 sm:py-32 lg:py-40 bg-background">
+    <section id="home" className="relative w-full py-24 sm:py-32 lg:py-40 bg-background overflow-hidden">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div></div>
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-in-up">
           <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl lg:text-7xl">
             Ahsan Tariq
           </h1>

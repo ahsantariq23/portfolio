@@ -36,6 +36,8 @@ export const skillsData: SkillCategory[] = [
       { name: 'Git/GitHub', level: 95 },
       { name: 'Linux/Unix', level: 75 },
       { name: 'CI/CD', level: 70 },
+      { name: 'PyTest', level: 85 },
+      { name: 'JUnit', level: 80 },
     ],
   },
 ];
@@ -77,6 +79,15 @@ export const projectsData: Project[] = [
 
 export const experienceData: Experience[] = [
   {
+    role: 'Bachelor of Science in Computer Science',
+    company: 'Quaid-i-Azam University, Islamabad',
+    period: 'Completed July 2025',
+    description: [
+      'Core coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Operating Systems, Computer Networks, and Software Engineering.',
+      'Specialized in: DevOps, Cloud Computing, Web Application Development, Artificial Intelligence, and Compiler Construction.'
+    ],
+  },
+  {
     role: 'Backend Developer Intern',
     company: 'National Centre for Physics (NCP), Islamabad',
     period: 'Aug 2024 – Nov 2024',
@@ -84,15 +95,6 @@ export const experienceData: Experience[] = [
       'Contributed to the development of an Event Management System using Django.',
       'Designed and implemented RESTful APIs to handle various event-related operations.',
       'Collaborated on modules managing registrations, venues, schedules, and participant data.',
-    ],
-  },
-  {
-    role: 'Bachelor of Science in Computer Science',
-    company: 'Quaid-i-Azam University, Islamabad',
-    period: 'July 2025',
-    description: [
-        'Comprehensive coursework including: Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Operating Systems, Computer Networks, and Software Engineering.',
-        'Specialized electives in DevOps, Cloud Computing, Web Application Development, and Artificial Intelligence.',
     ],
   },
 ];

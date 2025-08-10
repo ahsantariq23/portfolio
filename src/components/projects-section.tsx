@@ -19,15 +19,15 @@ export default function ProjectsSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-6xl gap-8 py-12 sm:grid-cols-1 md:grid-cols-2">
-          {projectsData.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          {projectsData.map((project, index) => (
+            <Card key={project.title} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
               <CardHeader>
                 <div className="relative aspect-video w-full overflow-hidden rounded-t-lg">
                     <Image
                         src={project.imageUrl}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={project.imageHint}
                     />
                 </div>
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
               <CardContent className="flex-grow">
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
-              <CardFooter className="flex justify-end gap-2 bg-secondary/30 p-4">
+              <CardFooter className="flex justify-end gap-2 bg-secondary/30 p-4 mt-auto">
                 <Button variant="outline" asChild>
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" /> Code

@@ -6,6 +6,7 @@ import { Github, Linkedin, Menu, X, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { ThemeToggle } from './theme-toggle';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -76,8 +77,9 @@ export default function Header() {
             <NavLinks />
         </div>
 
-        <div className="hidden md:flex items-center justify-end ml-auto">
+        <div className="hidden md:flex items-center justify-end ml-auto gap-2">
             <SocialLinks />
+            <ThemeToggle />
         </div>
 
         <div className="flex md:hidden items-center justify-end ml-auto">
@@ -113,8 +115,9 @@ export default function Header() {
                           </SheetClose>
                         ))}
                       </nav>
-                      <div className="mt-4">
+                      <div className="mt-4 flex items-center justify-between">
                         <SocialLinks />
+                        <ThemeToggle />
                       </div>
                     </div>
                 </SheetContent>

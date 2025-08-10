@@ -14,17 +14,17 @@ export default function ExperienceSection() {
           </div>
         </div>
         <div className="relative mt-12 max-w-3xl mx-auto">
-          <div className="absolute left-1/2 -translate-x-1/2 md:left-6 h-full w-0.5 bg-border"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 md:left-6 h-full w-0.5 bg-border/80"></div>
           {experienceData.map((item, index) => (
-            <div key={index} className="relative md:pl-12 mb-12">
-              <div className="md:absolute top-1 left-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground ring-8 ring-secondary/50">
+            <div key={index} className="relative md:pl-12 mb-12 group">
+              <div className="md:absolute top-1 left-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground ring-8 ring-background transition-transform duration-300 group-hover:scale-110">
                 {item.role.toLowerCase().includes('bachelor') ? (
                     <GraduationCap className="h-5 w-5"/>
                 ) : (
                     <Briefcase className="h-5 w-5"/>
                 )}
               </div>
-              <div className="p-6 rounded-lg bg-card shadow-md ml-0 md:ml-12 transition-all duration-300 hover:shadow-xl hover:border-primary/50 border">
+              <div className="p-6 rounded-lg bg-card shadow-md ml-0 md:ml-12 transition-all duration-300 hover:shadow-xl hover:border-primary/50 border border-transparent group-hover:-translate-y-1">
                  <div className="flex flex-col md:flex-row justify-between md:items-center mb-2">
                     <h3 className="text-xl font-bold font-headline">{item.role}</h3>
                     <p className="text-sm text-muted-foreground font-medium">{item.period}</p>
