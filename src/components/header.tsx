@@ -21,19 +21,19 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const NavLinks = ({ className }: { className?: string }) => (
-    <nav className={cn("flex items-center gap-4 lg:gap-6", className)}>
+    <nav className={cn("flex items-center gap-6 lg:gap-8", className)}>
       {navItems.map((item) => (
         <Link
           key={item.name}
           href={item.href}
-          className="text-sm font-medium transition-colors hover:text-primary"
+          className="text-md font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           {item.name}
         </Link>
@@ -64,13 +64,13 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full border-b border-transparent transition-all duration-300',
-        isScrolled ? 'border-border bg-background/80 backdrop-blur-sm' : 'bg-background'
+        'sticky top-0 z-50 w-full transition-all duration-300',
+        isScrolled ? 'border-b border-border bg-background/90 backdrop-blur-sm' : 'bg-background'
       )}
     >
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-20 items-center">
         <Link href="#home" className="mr-6 flex items-center">
-          <span className="font-headline text-lg font-bold text-primary">Ahsan Tariq</span>
+          <span className="font-headline text-xl font-bold text-primary">Ahsan Tariq</span>
         </Link>
         
         <div className="hidden md:flex flex-1 items-center justify-center">
@@ -83,6 +83,7 @@ export default function Header() {
         </div>
 
         <div className="flex md:hidden items-center justify-end ml-auto">
+            <ThemeToggle />
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost" size="icon">
@@ -115,9 +116,8 @@ export default function Header() {
                           </SheetClose>
                         ))}
                       </nav>
-                      <div className="mt-4 flex items-center justify-between">
+                      <div className="mt-4">
                         <SocialLinks />
-                        <ThemeToggle />
                       </div>
                     </div>
                 </SheetContent>

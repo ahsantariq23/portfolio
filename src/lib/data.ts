@@ -4,47 +4,65 @@ export const skillsData: SkillCategory[] = [
   {
     name: 'Languages',
     skills: [
-      { name: 'Python', level: 90 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'SQL', level: 80 },
-      { name: 'HTML/CSS', level: 95 },
+      { name: 'Python' },
+      { name: 'JavaScript' },
+      { name: 'TypeScript' },
+      { name: 'SQL' },
+      { name: 'HTML/CSS' },
     ],
   },
   {
-    name: 'Web Development',
+    name: 'Backend Development',
     skills: [
-      { name: 'React.js', level: 85 },
-      { name: 'Flask / Flask-Smorest', level: 90 },
-      { name: 'Django', level: 80 },
-      { name: 'RESTful APIs', level: 95 },
+      { name: 'Node.js' },
+      { name: 'Flask' },
+      { name: 'Django' },
+      { name: 'RESTful APIs' },
+      { name: 'GraphQL' },
     ],
   },
   {
-    name: 'Backend',
+    name: 'Frontend Development',
     skills: [
-      { name: 'JWT Authentication', level: 90 },
-      { name: 'OAuth 2.0', level: 75 },
-      { name: 'PostgreSQL', level: 85 },
-      { name: 'MySQL', level: 80 },
-      { name: 'MongoDB', level: 70 },
+      { name: 'React' },
+      { name: 'Next.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn UI' },
+    ],
+  },
+  {
+    name: 'Databases',
+    skills: [
+      { name: 'PostgreSQL' },
+      { name: 'MySQL' },
+      { name: 'MongoDB' },
+      { name: 'Firebase' },
+    ],
+  },
+   {
+    name: 'Authentication',
+    skills: [
+      { name: 'JWT' },
+      { name: 'OAuth 2.0' },
+      { name: 'Clerk' },
     ],
   },
   {
     name: 'DevOps & Tools',
     skills: [
-      { name: 'Docker', level: 80 },
-      { name: 'Git/GitHub', level: 95 },
-      { name: 'Linux/Unix', level: 75 },
-      { name: 'CI/CD', level: 70 },
-      { name: 'PyTest', level: 85 },
-      { name: 'JUnit', level: 80 },
+      { name: 'Docker' },
+      { name: 'Git/GitHub' },
+      { name: 'CI/CD' },
+      { name: 'Linux/Unix' },
+      { name: 'PyTest' },
+      { name: 'JUnit' },
     ],
   },
 ];
 
 export const projectsData: Project[] = [
   {
-    title: 'Expense Tracker Frontend',
+    title: 'Expense Tracker',
     description: 'A responsive and interactive UI for tracking expenses. Features reusable components, efficient state management with React Hooks and Context API, and a mobile-friendly layout.',
     tags: ['React', 'Context API', 'HTML/CSS'],
     imageUrl: 'https://placehold.co/600x400',
@@ -78,7 +96,7 @@ export const projectsData: Project[] = [
 ];
 
 export const experienceData: Experience[] = [
-  {
+    {
     role: 'Bachelor of Science in Computer Science',
     company: 'Quaid-i-Azam University, Islamabad',
     period: 'Completed July 2025',
